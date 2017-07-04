@@ -1,3 +1,4 @@
+#!/bin/sh
 #Variables--------------------------------------
 CRI01=$( grep -ic "CRI-01" /etc/hostname ) #Check if the node is 01
 CRI02=$( grep -ic "CRI-02" /etc/hostname ) #Check if the node is 02
@@ -149,7 +150,7 @@ then
   echo "Creative Checker"
     #Checking if the 	creati_db4ca575 Server Exists
     Creativefile="creati_db4ca575"
-    Creativeid="15018"
+    Creativeid="15019"
     if [ -d "$DIRECTORY" ]; then
       cd $DIRECTORY
       echo "Directory was found running file cleanup" && echo ""
