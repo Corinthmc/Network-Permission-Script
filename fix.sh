@@ -1,9 +1,9 @@
 #!/bin/sh
 #Variables--------------------------------------
-MCH-01-V-01=$( grep -ic "MCH-01-V-01" /etc/hostname ) #Check if the node is 01
-MCH-01-V-02=$( grep -ic "MCH-01-V-02" /etc/hostname ) #Check if the node is 02
-MCH-02-V-01=$( grep -ic "MCH-02-V-01" /etc/hostname ) #Check if the node is 03
-MCH-02-V-02=$( grep -ic "MCH-02-V-02" /etc/hostname ) #Check if the node is 04
+MCH01V01=$( grep -ic "MCH-01-V-01" /etc/hostname ) #Check if the node is 01
+MCH01V02=$( grep -ic "MCH-01-V-02" /etc/hostname ) #Check if the node is 02
+MCH02V01=$( grep -ic "MCH-02-V-01" /etc/hostname ) #Check if the node is 03
+MCH02V02=$( grep -ic "MCH-02-V-02" /etc/hostname ) #Check if the node is 04
 DIRECTORY="/srv/daemon-data" #Data Directory
 RUNTIMEOUT="5" #How many seconds between checks
 root="root" #System Root user
@@ -26,28 +26,28 @@ echo -n "Checking what node this is"
 sleep 1 && echo -n "." && sleep 1 && echo -n "." && sleep 1 && echo -n "." && sleep 1 && echo -n "." && sleep 1 && echo -n "."
 echo ""
 #Tell the user what the hostname is
-if [ $MCH-01-V-01 -eq 1 ]
+if [ $MCH01V01 -eq 1 ]
 then
 echo "The Node is MCH-01-V-01"
 else
   echo -n ""
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
 echo "The Node is MCH-01-V-02"
 else
   echo -n ""
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
 echo "The Node is MCH-02-V-01"
 else
   echo -n ""
 fi
 
-if [ $MCH-02-V-02 -eq 1 ]
+if [ $MCH02V02 -eq 1 ]
 then
 echo "The Node is MCH-02-V-02"
 else
@@ -55,7 +55,7 @@ else
 fi
 
 echo "" && echo ""
-if [ $MCH-01-V-01 -eq 1 ] && [ $MCH-01-V-02 -eq 1 ] && [ $MCH-02-V-01 -eq 1 ] && [ $MCH-02-V-02 -eq 1 ]
+if [ $MCH01V01 -eq 1 ] && [ $MCH01V02 -eq 1 ] && [ $MCH02V01 -eq 1 ] && [ $MCH02V02 -eq 1 ]
 then
     echo "This Node is not known or the hostname is messed up!, Please consult an admin"
   fi
@@ -69,7 +69,7 @@ then
    echo "" && echo ""
    sleep 2
 
-if [ $MCH-01-V-01 -eq 1 ]
+if [ $MCH01V01 -eq 1 ]
 then
   #BungeeCord Checker!
   echo "BungeeCord Checker"
@@ -92,7 +92,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-01 -eq 1 ]
+if [ $MCH01V01 -eq 1 ]
 then
   #Hub Checker!
   echo ""
@@ -117,7 +117,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-01 -eq 1 ]
+if [ $MCH01V01 -eq 1 ]
 then
   #ArcadeHub Checker!
   echo ""
@@ -142,7 +142,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-01 -eq 1 ]
+if [ $MCH01V01 -eq 1 ]
 then
   #Creative Checker!
   echo ""
@@ -167,7 +167,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #Sumo Checker!
   echo ""
@@ -192,7 +192,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #CraftBert Checker!
   echo ""
@@ -217,7 +217,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #CraftMan Checker!
   echo ""
@@ -242,7 +242,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #BuildBattle Checker!
   echo ""
@@ -267,7 +267,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #SimonSheep Checker!
   echo ""
@@ -292,7 +292,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #NaturalDisaster Checker!
   echo ""
@@ -317,7 +317,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #TNTWars Checker!
   echo ""
@@ -342,7 +342,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #Tron Checker!
   echo ""
@@ -367,7 +367,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #HideNSeek Checker!
   echo ""
@@ -392,7 +392,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #GhastInvaders Checker!
   echo ""
@@ -417,7 +417,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-01-V-02 -eq 1 ]
+if [ $MCH01V02 -eq 1 ]
 then
   #Craftis Checker!
   echo ""
@@ -442,7 +442,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #Empires Checker!
   echo ""
@@ -467,7 +467,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #Ancients Checker!
   echo ""
@@ -492,7 +492,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #SkyWars Checker!
   echo ""
@@ -517,7 +517,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #Gladiators Checker!
   echo ""
@@ -542,7 +542,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #Portals Checker!
   echo ""
@@ -567,7 +567,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #Legions Checker!
   echo ""
@@ -592,7 +592,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-01 -eq 1 ]
+if [ $MCH02V01 -eq 1 ]
 then
   #SurvivalGames Checker!
   echo ""
@@ -617,7 +617,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-02 -eq 1 ]
+if [ $MCH02V02 -eq 1 ]
 then
   #DevServer Checker!
   echo ""
@@ -642,7 +642,7 @@ then
   sleep 0.2
 fi
 
-if [ $MCH-02-V-02 -eq 1 ]
+if [ $MCH02V02 -eq 1 ]
 then
   #onePoint12 Checker!
   echo ""
