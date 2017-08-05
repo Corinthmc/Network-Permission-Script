@@ -1,9 +1,9 @@
 #!/bin/sh
 #Variables--------------------------------------
-MCH-01-V-01=$( grep -ic "CRI-01" /etc/hostname ) #Check if the node is 01
-MCH-01-V-02=$( grep -ic "CRI-02" /etc/hostname ) #Check if the node is 02
-MCH-02-V-01=$( grep -ic "CRI-03" /etc/hostname ) #Check if the node is 03
-MCH-02-V-02=$( grep -ic "CRI-04" /etc/hostname ) #Check if the node is 04
+MCH-01-V-01=$( grep -ic "MCH-01-V-01" /etc/hostname ) #Check if the node is 01
+MCH-01-V-02=$( grep -ic "MCH-01-V-02" /etc/hostname ) #Check if the node is 02
+MCH-02-V-01=$( grep -ic "MCH-02-V-01" /etc/hostname ) #Check if the node is 03
+MCH-02-V-02=$( grep -ic "MCH-02-V-02" /etc/hostname ) #Check if the node is 04
 DIRECTORY="/srv/daemon-data" #Data Directory
 RUNTIMEOUT="5" #How many seconds between checks
 root="root" #System Root user
@@ -28,28 +28,28 @@ echo ""
 #Tell the user what the hostname is
 if [ $MCH-01-V-01 -eq 1 ]
 then
-echo "The Node is CRI-01"
+echo "The Node is MCH-01-V-01"
 else
   echo -n ""
 fi
 
 if [ $MCH-01-V-02 -eq 1 ]
 then
-echo "The Node is CRI-02"
+echo "The Node is MCH-01-V-02"
 else
   echo -n ""
 fi
 
 if [ $MCH-02-V-01 -eq 1 ]
 then
-echo "The Node is CRI-03"
+echo "The Node is MCH-02-V-01"
 else
   echo -n ""
 fi
 
 if [ $MCH-02-V-02 -eq 1 ]
 then
-echo "The Node is CRI-04"
+echo "The Node is MCH-02-V-02"
 else
   echo -n ""
 fi
